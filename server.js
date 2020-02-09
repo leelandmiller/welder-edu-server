@@ -6,6 +6,10 @@ if (process.env.NODE_ENV === 'production') {
   app = require('./src/app.js');
 }
 
-app.listen(parseInt(process.env.PORT, 10), () => {
+const appConfig = require('./config')()
+
+const PORT = appConfig.PORT || process.env.PORT
+
+app.listen(parseInt(PORT, 10), () => {
   console.log(`Server listening on port ${app.get('port')}`);
 });
