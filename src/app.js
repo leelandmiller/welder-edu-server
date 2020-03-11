@@ -10,7 +10,7 @@ import uuidv4 from 'uuid/v4';
 import { makeExecutableSchema } from 'graphql-tools';
 import { apolloUploadExpress } from 'apollo-upload-server';
 
-const appConfig = require('../config')();
+const appConfig = require('./config')();
 const secret = process.env.SECRET;
 const ENV = process.env.NODE_ENV || 'development';
 const app = express()
@@ -25,6 +25,7 @@ passport.use(new FacebookStrategy(
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
+    const { id, displayName } = profile;
     // first arg of cb is error
     cb(null, profile);
   }

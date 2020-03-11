@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') {
   app = require('./src/app.js');
 }
 
-const appConfig = require('./config')()
+// const appConfig = require('./config')()
 
 app.listen(app.get('port'), () => {
   console.log(`Server listening on port ${app.get('port')}`);
