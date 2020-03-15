@@ -1,0 +1,152 @@
+.appbar {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+
+  @media (min-width: $small-break) {
+    height: 72px;
+    justify-content: space-between;
+    padding-left: 24px;
+  }
+
+  &-container {
+    z-index: 1200;
+  }
+
+  &-logo {
+    height: 48px;
+    // padding: 12px 0px;
+    @extend .pointer;
+
+    @media (min-width: $med-break) {
+      height: 56px;
+    }
+  }
+}
+
+.nav-links {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+
+  &--link {
+    white-space: nowrap;
+    height: 100%;
+
+    // &:not(:last-child) {
+    //   margin-right: 16px;
+    // }
+  }
+}
+
+.menu-btn-container {
+  border-radius: 50%;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+
+  &:hover {
+    .menu-btn-bg {
+      opacity: 1;
+    }
+  }
+}
+
+.menu-btn {
+  @extend .pointer;
+  padding: 8px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &-bg {
+    background-color: $transparent-black;
+    transition: opacity 0.1s linear;
+    opacity: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.navigation-drawer {
+  width: 192px;
+}
+
+.nested-li {
+  padding-left: 48px !important;
+}
+
+.bottom-nav {
+  z-index: 1200;
+  transition: all 0.2s linear;
+}
+
+.dialog-toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.admin-navbar {
+  background-color: $primary-dark-clr;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+
+  @media (min-width: $med-break) {
+    justify-content: flex-start;
+  }
+
+  .go-to-dash {
+    @extend .txt-link;
+    color: #fff;
+    margin-left: 12px;
+    
+    @media (min-width: $small-break) {
+      margin-right: 24px;
+      margin-left: 24px;
+    }
+  }
+
+  .logout {
+    @extend .txt-link;
+    @extend .pointer;
+    color: #fff;
+    margin-right: 12px;
+    
+    @media (min-width: $small-break) {
+      margin-right: 36px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

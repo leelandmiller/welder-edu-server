@@ -1,0 +1,37 @@
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  z-index: 1200;
+
+  &-item {
+    @extend .pointer;
+    @extend .txt-small;
+    transition: background-color 0.2s ease-in-out;
+    padding: 8px 16px;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+}
+
+.menu-filter-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

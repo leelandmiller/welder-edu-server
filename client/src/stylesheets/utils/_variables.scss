@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
+
+/* Colors */
+$Roboto: Roboto, sans-serif;
+$FontFamily: 'Roboto', sans-serif;
+$white-txt-clr: #ffffff;
+$dark-txt-clr: rgba(0,0,0,0.7);
+$med-txt-clr: rba(0,0,0,0.6);
+$grey-txt-clr: rgba(46, 46, 46, 0.5);
+$link-txt-clr: #0091EA;
+$black: #212121;
+$grey: #484848;
+$img-placeholder-clr: #b4b4c4;
+$unselected-icon-clr: #989898;
+$light-grey: #C4C4C4;
+$very-light-grey: #ededed;
+$white: #FFFFFF;
+$red: #f44336;
+$green: #009688;
+$green-dark: #036c63;
+$transparent-black: rgba(0,0,0,0.1);
+$semi-transparent-black: rgba(0,0,0,0.5);
+
+$drawer-selected-bg-clr: rgba(0, 0, 0, 0.08);
+
+$primary-clr: #007da4;
+$primary-light-clr: #52acd5;
+$primary-dark-clr: #005175;
+
+$secondary-clr: #FFEB3B;
+$secondary-light-clr: #ffef63;
+$secondary-dark-clr: #d5c006;
+
+/* Other */
+$card-box-shadow: 0px 0px 5px $transparent-black;
+$card-box-shadow-hover: 0px 0px 10px $semi-transparent-black;
+$drop-shadow: 0px 2px 10px $transparent-black;
+$ic-drop-shadow: 0px 2px 10px $semi-transparent-black;
+$white-border: 1px solid $white;
+
+/* Breakpoints */
+$tiny-break: 375px;
+$small-break: 600px;
+$med-break: 960px;
+$large-break: 1280px;
+$huge-break: 1920px;

@@ -1,0 +1,366 @@
+.view-houses-container {
+  margin-top: 0px;
+
+  .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.browse-houses-view {
+  @extend .container;
+  margin-top: 24px;
+  min-height: calc(100vh - 344px);
+  justify-content: center;
+
+  @media (max-width: $small-break) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .inner {
+    // margin-left: -8px;
+    // margin-right: -8px;
+    // width: 100%;
+
+    h1, h3 {
+      margin-left: 8px;
+    }
+    h1 {
+      margin-top: 24px;
+    }
+    h3 {
+      margin-top: 8px;
+    }
+  }
+
+  &-section {
+    margin-top: 48px;
+    width: 100%;
+  }
+
+  &-section:first-child {
+    margin-top: 8px;
+  }
+
+  &-grid {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .empty-container {
+    width: 100%;
+    align-items: center;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0.8;
+
+    .info {
+      margin-top: 24px;
+    }
+
+    h4, h5 {
+      text-align: center;
+      color: $med-txt-clr;
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+      filter: grayscale(40%) opacity(0.7);
+    }
+  }
+
+  .browse-houses-card {
+    width: 100%;
+    padding: 16px 8px;
+
+    &-img-wrapper {
+      border-radius: 4px;
+      background-color: $img-placeholder-clr;
+
+      .img {
+        width: 100%;
+        border-radius: 4px;
+
+        @extend .pointer;
+        @include aspect-ratio(5, 3);
+      }
+    }
+
+    &-custom {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: row;
+
+      .custom-details-ic {
+        margin-right: 8px;
+
+        &-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      .custom-details-section {
+        margin-right: 6px;
+        margin-left: 6px;
+        &:first-child {
+          margin-left: 0px;
+        }
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    &-price {
+      margin-top: 12px;
+      @extend .txt-small;
+      font-weight: 500;
+      color: $green;
+
+      @extend .pointer;
+    }
+
+    &-content {
+      margin-top: 4px;
+
+      @extend .pointer;
+
+      .park {
+        @extend .body2;
+      }
+
+      .address {
+        @extend .txt-small;
+        margin-top: 2px;
+      }
+
+      .city {
+        @extend .txt-small;
+      }
+    }
+
+    @media (min-width: $small-break) {
+      width: calc(50% - 16px);
+    }
+
+    @media (min-width: $med-break) {
+      width: calc(33% - 13px);
+    }
+
+  }
+}
+
+.browse-houses-filter-bar {
+  height: 56px;
+
+  .inner {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    .filter-select {
+      width: 40px;
+    }
+
+    .year-filter-form {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      &-inner {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .year-filter-error {
+        @extend .txt-error;
+      }
+
+      .year-filter-apply {
+        margin-top: 24px;
+      }
+    }
+
+    .price-filter-form {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      &-inner {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .price-filter-error {
+        @extend .txt-error;
+      }
+
+      .price-filter-apply {
+        margin-top: 24px;
+      }
+    }
+
+    .status-filter-form {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      &-inner {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .status-filter-error {
+        @extend .txt-error;
+      }
+    }
+
+    .price-filter-input {
+      margin-left: 24px;
+      margin-right: 24px;
+      width: 96px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .year-filter-select {
+      margin-left: 24px;
+      margin-right: 24px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .price-filter-select {
+      margin-left: 24px;
+      margin-right: 24px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .browse-houses-filter {
+      position: relative;
+      z-index: 10;
+      margin-left: 4px;
+
+      &:first-child {
+        margin-left: 8px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+
+    .browse-houses-filter-btn {
+      color: $black;
+      text-transform: initial;
+      font-weight: 300;
+      border: 1px solid $light-grey;
+      min-height: 18px;
+      padding: 6px 12px;
+      min-width: unset;
+
+      &.pushed {
+        background-color: $primary-clr;
+        color: $white;
+      }
+    }
+
+    .browse-houses-filter-menu {
+      background-color: white;
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      top: 48px;
+      left: 0px;
+      width: fit-content;
+      height: fit-content;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+      padding: 24px 24px 16px 24px;
+      z-index: 1;
+      position: fixed;
+      top: 136px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+
+      @media (min-width: $small-break) {
+        position: absolute;
+        top: 48px;
+        left: 0px;
+        transform: translate(0, 0);
+      }
+
+      .browse-houses-filter-close-btn {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+      }
+
+    }
+  }
+}

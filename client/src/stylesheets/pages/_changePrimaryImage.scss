@@ -1,0 +1,92 @@
+.change-primary-image {
+  margin-bottom: 64px;
+
+  &-info-container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+
+    .primary-info-text-wrapper {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-left: -4px;
+    }
+
+
+    .bookmark-ic-bg {
+      padding: 8px;
+      background-color: $semi-transparent-black;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+    }
+
+    .gold-bookmark-ic {
+      fill: $secondary-clr;
+    }
+
+    .info-text {
+      @extend .txt-small;
+    }
+
+    .info-text-extra {
+      margin-top: 4px;
+      @extend .txt-small;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: auto auto;
+
+    @media (min-width: $med-break) {
+      grid-gap: 16px;
+      grid-template-columns: auto auto auto;
+    }
+
+    &-item {
+      width: 100%;
+    }
+  }
+
+  &-wrapper {
+    @extend .pointer;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    border-radius: 4px;
+
+    .delete-ic-root {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 100;
+
+      .delete-ic {
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-primary-ic {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    fill: $secondary-clr;
+  }
+
+  &--image {
+    width: 100%;
+    // position: absolute;
+    border-radius: 4px;
+  }
+}

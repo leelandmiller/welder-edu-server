@@ -1,0 +1,83 @@
+.login {
+  &-headline {
+    margin-bottom: 48px;
+  }
+
+  &-form {
+    &-field {
+      margin-bottom: 32px;
+    }
+
+    &-action {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.login-container {
+  @extend .container;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+
+  &--inner {
+    width: 100%;
+
+    @media (min-width: $small-break) {
+      width: 464px;
+    }
+  }
+}
+
+.register-container {
+  @extend .container;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+
+  &--inner {
+    width: 100%;
+
+    @media (min-width: $med-break) {
+      width: 640px;
+    }
+  }
+}
+
+.register {
+
+  &-headline {
+    margin-bottom: 48px;
+  }
+
+  &-form {
+    .row {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .col {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 0px 8px;
+    }
+
+    &-action {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

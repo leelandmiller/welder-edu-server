@@ -1,0 +1,20 @@
+.four-oh-four-wrapper {
+  @extend .container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 72px;
+  }
+
+  .info {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .back-to-home {
+    margin-top: 24px;
+  }
+}

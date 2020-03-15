@@ -1,0 +1,86 @@
+.newsletter {
+  &-heading {
+    position: relative;
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+
+      .newsletter-description {
+        @extend .txt-small;
+        margin-top: 16px;
+        color: $white;
+        text-align: center;
+      }
+    }
+  }
+  
+  &-paper {
+    width: 900px;
+  }
+  
+  &-img {
+    &-wrapper {
+      @include aspect-ratio(16, 6);
+    }
+    width: 100%;
+    filter: brightness(60%);
+  }
+
+
+  &-title {
+    color: $white;
+    text-align: center;
+    font-size: 16px;
+
+    @media (min-width: $med-break) {
+      font-size: 24px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    padding: 24px 36px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    
+    .newsletter-input {
+      margin-right: 0px;
+      margin-bottom: 24px;
+      width: 100%;
+      
+      @media (min-width: $med-break) {
+        flex: 1;
+        margin-right: 16px;
+        margin-bottom: 0px;
+      }
+    }
+    
+    @media (min-width: $med-break) {
+      flex-direction: row;
+    }
+  }
+
+  &-close-ic-btn {
+    @extend .modal-close-btn;
+  }
+
+  &-subscribe-btn {
+    border-radius: 4px !important;
+    height: unset;
+  }
+
+  &-subscribe-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: $med-break) {
+      flex-direction: row;
+    }
+  }
+}

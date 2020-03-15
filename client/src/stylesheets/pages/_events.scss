@@ -1,0 +1,364 @@
+.open-house-event {
+  margin-top: 32px;
+  padding: 0px 12px;
+  padding-bottom: 32px;
+
+  .email-details {
+    &-paper {
+      padding: 24px;
+      margin-bottom: 36px;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .heading {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .send-email-btn {
+      height: fit-content;
+      margin-right: 8px;
+    }
+  }
+
+  .send-delay-heading {
+    margin-bottom: 16px;
+  }
+
+  .error-wrapper {
+    height: 64px;
+    margin-top: 16px;
+
+    @extend .txt-error;
+  }
+
+  .add-data-btn {
+    border: 1px solid rgba(0, 125, 164, 0.23);
+  }
+
+  .rmv-date-btn {
+    margin-left: 8px;
+  }
+
+  .send-delay {
+    margin-bottom: 24px;
+
+    &-paper {
+      padding: 16px;
+    }
+  }
+
+  .send-email-btn-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: $med-break) {
+      flex-direction: row;
+    }
+  }
+
+  .send-email-btn {
+    margin-right: 16px;
+    border-radius: 4px !important;
+    background-color: $primary-clr;
+    color: $white-txt-clr;
+    width: 120px;
+
+    &:hover {
+      background-color: $primary-dark-clr;
+    }
+
+    &-sending {
+      @extend .send-email-btn;
+      width: 120px;
+      background-color: $secondary-clr !important;
+
+      &:hover {
+        background-color: $secondary-dark-clr !important;
+      }
+    }
+
+    &-sent {
+      @extend .send-email-btn;
+      width: 120px;
+      background-color: $green !important;
+
+      &:hover {
+        background-color: $green-dark !important;
+      }
+    }
+
+  }
+
+  .date-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .open-house-date-wrapper-heading {
+    margin-bottom: 8px;
+  }
+
+  .open-house-action-btns {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $med-break) {
+    margin-top: 0px;
+  }
+}
+
+.open-house-picker {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $med-break) {
+    flex-direction: row;
+    flex-flow: wrap;
+  }
+}
+
+.date-picker {
+  margin-bottom: 16px;
+
+  @media (min-width: $med-break) {
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &-tf {
+    @media (max-width: $med-break) {
+      width: 100%;
+    }
+  }
+}
+
+.open-house-delay-picker {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  
+  @media (min-width: $med-break) {
+    flex-direction: row;
+    flex-flow: wrap;
+
+  }
+
+  .delay-date-picker {
+    
+    &:first-child {
+      margin: 0px;
+
+      @media (min-width: $med-break) {
+        margin-right: 8px;
+      }
+    }
+    &:last-child {
+      margin: 0px;
+      margin-top: 12px;
+
+      @media (min-width: $med-break) {
+        margin-left: 8px;
+        margin-top: 0px;
+      }
+    }
+
+  }
+}
+
+.datetime-picker-tf {
+  width: fit-content;
+}
+
+.open-house-carousel {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  @media (min-width: $med-break) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.open-house-card-wrapper {
+  position: relative;
+  @extend .pointer;
+
+  .overlay {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: auto;
+  }
+
+  .check-ic {
+    z-index: 11;
+    position: absolute;
+    right: 0;
+    color: $green;
+  }
+
+  .delete-ic-root {
+    z-index: 11;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 8px;
+  }
+
+  .delete-ic {
+    font-size: 20px !important;
+  }
+}
+
+.open-house-card {
+  display: inline-flex;
+  width: calc(100% - 16px);
+  flex-direction: column;
+  margin: 8px;
+  flex: 0 0 auto;
+  // position: absolute;
+  
+  @media (min-width: $small-break) {
+    flex-direction: row;
+  }
+
+  &-park {
+    @extend .body2;
+  }
+
+  &-addr {
+    @extend .txt-small;
+
+    .space-num {
+      font-weight: 500;
+    }
+  }
+
+  &-content {
+    padding: 8px !important;
+
+    @media (min-width: $small-break) {
+      padding: 24px !important;
+    }
+  }
+
+  .alert-price-change {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+    
+    @media (min-width: $small-break) {
+      padding: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: $med-break) {
+      justify-content: flex-start;
+      margin-top: -24px;
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+
+    .new-price {
+      color: $green;
+      margin-right: 8px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+  }
+
+  .paper-content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $small-break) {
+      flex-direction: row;
+    }
+    
+    @media (min-width: $med-break) {
+      flex-direction: column;
+    }
+  }
+}
+
+.open-house-card-img {
+  width: 100%;
+  height: 120px;
+  
+  @media (min-width: $small-break) {
+    width: 100px;
+    height: unset;
+  }
+}
+
+.email-success-dialog {
+  &-title {
+    padding-bottom: 8px !important;
+
+    h3 {
+      margin-top: 12px;
+    }
+  }
+
+  .li {
+    padding-left: 0px;
+  }
+
+  .primary-li-txt {
+    font-weight: 500;
+  }
+}
+
+.email-err-snackbar {
+  @extend .txt-error;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-reverse {
+  flex-direction: row-reverse;
+}
+
+.test-email-checkbox {
+  margin-left: 8px;
+}
+
+.scheduled-email-li {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.expansion-panel {
+  &-summary {
+    &-heading {
+      flex-basis: 33.33%;
+      flex-shrink: 0;
+    }
+  }
+}

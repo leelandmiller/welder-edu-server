@@ -1,0 +1,11 @@
+.photo-grid {
+  &-img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+
+    &.two-col {
+      height: unset;
+    }
+  }
+}

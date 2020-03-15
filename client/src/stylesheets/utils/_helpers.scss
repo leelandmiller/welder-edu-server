@@ -1,0 +1,167 @@
+.txt-huge {
+  font-size: 48px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+}
+
+.txt-headline {
+  font-size: 36px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+}
+
+.txt-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+}
+
+.txt-sub-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+}
+
+.body2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark-txt-clr;
+}
+
+.body1 {
+  font-size: 16px;
+  font-weight: 300;
+  color: $grey;
+}
+
+.txt-small {
+  font-size: 14px;
+  font-weight: 300;
+  color: $dark-txt-clr;
+}
+
+.txt-tiny {
+  font-size: 12px;
+  font-weight: 300;
+  color: $dark-txt-clr;
+}
+
+.txt-grey {
+  color: $grey-txt-clr;
+  // font-weight: 300;
+}
+
+.txt-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: $link-txt-clr;
+}
+
+.txt-error {
+  font-size: 14px;
+  font-weight: 500;
+  color: $red;
+}
+
+.container {
+  max-width: 1080px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+.mini-container {
+  max-width: 640px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+
+.top-gradient-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.25);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
+  transition: all 0.2s ease;
+}
+
+.left-gradient-overlay {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 56px;
+  z-index: 9;
+
+  background: rgba(0,0,0,0.25);
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.25)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=1 );
+
+  transition: all 0.2s ease !important;
+}
+
+.right-gradient-overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 56px;
+  z-index: 9;
+
+  background: rgba(0,0,0,0.45);
+  background: -moz-linear-gradient(right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.35)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 );
+
+  transition: all 0.2s ease !important;
+}
+
+.fetching-more {
+  width: 100%;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+}
+
+.loading-container {
+  // height: calc(100vh - 128px - 72px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-page-loading-container {
+  display: flex;
+  height: calc(100vh - 96px);
+}
+
+.jms-paper {
+  padding: 16px;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,204 @@
+.list-with-us-banner {
+  @extend .home-page-banner;
+  height: 400px;
+}
+
+.list-with-us-paper {
+  @extend .mini-container;
+  // width: 100%;
+  margin-top: -32px;
+  margin-bottom: 64px;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .paper {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.what-we-do {
+  @extend .container;
+
+  &-heading {
+    text-align: center;
+  }
+
+  &-strats {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $med-break) {
+      flex-direction: row;
+    }
+
+    .listing-strat {
+      display: flex;
+      padding: 8px;
+      
+      @media (min-width: $med-break) {
+        flex: 1;
+      }
+      
+      &-paper {
+        padding: 24px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+
+        .learn-more-btn {
+          margin-top: auto;
+        }
+      }
+
+      .strats-ic {
+        font-size: 64px;
+        margin-bottom: 8px;
+        
+        &.colored {
+          color: $primary-clr;
+        }
+      }
+
+      .strats-info {
+        @extend .txt-small;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        text-align: center;
+        min-height: 76px;
+      }
+    }
+  }
+}
+
+.interested-in-selling-heading {
+  @extend .what-we-do-heading;
+  margin-top: 48px;
+}
+
+.interested-in-selling-card {
+  margin-top: 24px;
+
+  .work-with-us-btn {
+    border-radius: 4px;
+    margin-top: 24px;
+    justify-content: center;
+  }
+}
+
+.online-presence {
+  @extend .container;
+
+  .interested-in-selling-heading {
+    @extend .what-we-do-heading;
+    margin-bottom: 32px;
+  }
+
+  .work-with-us-btn {
+    border-radius: 4px;
+    margin-top: 24px;
+    justify-content: center;
+  }
+
+  &-section-heading {
+    margin-bottom: 24px;
+  }
+
+  &-heading {
+    margin-bottom: 16px;
+  }
+
+  &-newsletter-subscribe {
+    margin-top: 24px;
+  }
+
+  &-sub-heading {
+    width: 100%;
+    @media (min-width: $med-break) {
+      width: 60%;
+    }
+  }
+
+  .content-heading {
+    margin-bottom: 16px;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  &-card-wrapper {
+    margin: 24px 0px;
+  }
+
+  &-action-wrapper {
+    margin-top: 16px;
+  }
+
+  &-action-btn {
+    border-radius: 4px !important;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .email-marketing-card {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+
+    &.reverse {
+      flex-direction: column;
+
+      @media (min-width: $med-break) {
+        flex-direction: row-reverse;
+      }
+    }
+    
+    @media (min-width: $med-break) {
+      justify-content: space-around;
+      flex-direction: row;
+    }
+
+    &-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 36px;
+      
+      @media (min-width: $med-break) {
+        width: 70%;
+        margin-top: 0px;
+      }
+
+      .like-on-fb {
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .fb-like {
+          margin-top: 12px;
+        }
+      }
+
+      .photoshoot-action {
+        display: flex;
+        flex-direction: column;
+
+        &-btn {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.personal-touch {
+  @extend .container;
+}

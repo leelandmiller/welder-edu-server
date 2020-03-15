@@ -6,37 +6,34 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       primaryKey: true,
       allowNull: false,
-      type: Sequelize.UUID,
+      type: DataTypes.UUID,
       defaultValue: uuid()
     },
-    firstName: {
-      type: Sequelize.STRING
-    },
-    lastName: {
-      type: Sequelize.STRING
+    name: {
+      type: DataTypes.STRING
     },
     email: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     password: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     facebookId: {
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     userType: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       defaultValue: 'student'
     },
     createdAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     },
     updatedAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     }
   }, {});
   User.associate = function(models) {

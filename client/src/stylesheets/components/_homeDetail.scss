@@ -1,0 +1,9 @@
+.home-detail-modal {
+  min-width: 552px;
+
+  &-img {
+    object-fit: cover;
+    // min-height: 325px;
+    transition: all 0.2s ease-in-out;
+  }
+}

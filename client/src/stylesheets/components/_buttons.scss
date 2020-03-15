@@ -1,0 +1,39 @@
+.back-btn {
+  border-radius: 4px !important;
+}
+
+.btn-apply {
+  color: $black !important;
+  text-transform: initial !important;
+  border-radius: 4px !important;
+  min-height: unset !important;
+  padding: 6px 12px !important;
+  min-width: unset !important;
+}
+
+.modal-close-btn {
+  @extend .pointer;
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 16px;
+  color: white;
+}
+
+.close-btn-wrapper {
+  @extend .pointer;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  margin: -8px -8px -8px auto;
+}
+
+.close-button {
+  @extend .pointer;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  margin: -8px;
+}

@@ -1,0 +1,244 @@
+.custom-homes {
+  &-container {
+    @extend .container;
+  }
+
+  &-info {
+    margin-top: 32px;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 100%;
+    
+    @media (min-width: $small-break) {
+      grid-gap: 16px;
+      grid-template-columns: calc(33% - 8px) calc(33% - 8px) calc(33% - 8px);
+    }
+
+    &-section {
+      width: 100%;
+
+      h3 {
+        margin-top: 8px;
+      }
+
+      .description {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &-ic {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.browse-custom-homes {
+  margin-left: -24px;
+  margin-right: -24px;
+
+  &-heading {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 36px;
+  }
+}
+
+
+.custom-house-details {
+  @extend .container;
+  margin-top: 0px;
+
+  &-container {
+    .details-sticky {
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+      position: sticky;
+      top: 0px;
+    }
+
+    .details-relative {
+      position: relative;
+    }
+
+    .details-bar {
+      box-shadow: $drop-shadow;
+      background-color: $white;
+      transition: all 0.2s ease;
+      z-index: 100;
+
+      &-details {
+
+        @media (min-width: $med-break) {
+          display: flex;
+          flex-direction: row;
+          width: 50%;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        @media (min-width: $large-break) {
+          display: flex;
+          flex-direction: row;
+          width: 45%;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      &-inner {
+        @extend .container;
+        margin-top: 0px;
+        padding: 12px 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        @media (min-width: $med-break) {
+          align-items: center;
+          padding: 12px 24px;
+          flex-direction: row;
+        }
+      }
+
+      .manufacturer-details {
+        h2 {
+          font-weight: 500;
+        }
+
+        .detail {
+          display: inline-flex;
+  
+          &-title {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      &-house-details {
+        margin-top: 8px;
+
+        .detail {
+          @extend .txt-small;
+        }
+
+        @media (min-width: $med-break) {
+          margin-top: 0px;
+        }
+      }
+
+      &-request-info {
+        margin-top: 16px;
+
+        @media (min-width: $med-break) {
+          margin-top: 0px;
+        }
+        
+        .request-info-btn {
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  &-section {
+    @extend .container;
+
+    .custom-house-details-primary-img {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 16px;
+      
+      @media (min-width: $small-break) {
+        @include aspect-ratio(16, 8);
+        width: 100%;
+      }
+      
+      .custom-primary-img {
+        @extend .pointer;
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+
+    .custom-house-image-grid {
+      display: grid;
+      grid-gap: 8px;
+      grid-row-gap: 16px;
+      grid-template-columns: 100%;
+      
+      @media (min-width: $small-break) {
+        grid-template-columns: 50% 50%;
+      }
+      @media (min-width: $med-break) {
+        grid-template-columns: 33% 33% 33%;
+      }
+
+      img {
+        @extend .pointer;
+        width: 100%;
+        border-radius: 8px;
+        
+        @media (min-width: $small-break) {
+          width: calc(100% - 8px);
+        }
+      }
+    }
+  }
+}
+
+.image-dialog-paper {
+  margin: 0px !important;
+  border-radius: 0px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+
+  @media (min-width: $small-break) {
+    margin: 48px;
+    border-radius: 8px !important;
+  }
+}
+
+.image-dialog-chevron {
+  position: fixed;
+  top: 50%;
+  opacity: 0;
+  z-index: 100;
+  font-size: 56px !important;
+  transform: translate(0%, -50%);
+  color: $white;
+
+  transition: opacity 0.4s ease;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    @extend .pointer;
+  }
+}
+
+.image-dialog-container {
+  position: relative;
+  width: 100%;
+
+  .image-dialog-close {
+    @extend .pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: $white;
+    padding: 8px;
+    z-index: 100;
+  }
+
+  .image-dialog-img {
+    width: 100%;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media (min-width: $small-break) {
+      border-radius: 8px;
+    }
+  }
+}

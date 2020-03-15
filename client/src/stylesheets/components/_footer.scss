@@ -1,0 +1,114 @@
+.footer {
+  width: 100%;
+  background-color: $primary-clr;
+  margin-top: 64px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .copyright {
+    @extend .txt-tiny;
+    color: $white;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0px;
+    background-color: $primary-dark-clr;
+  }
+
+  &-heading {
+    color: $white;
+    margin-bottom: 8px;
+  }
+
+  &-inner {
+    @extend .container;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 36px 0px;
+    width: calc(100% - 96px);
+    margin: 0px 48px;
+
+    .detail {
+      @extend .txt-small;
+      @extend .pointer;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      color: $white;
+
+      &:first-child {
+        margin-top: 0px;
+        margin-bottom: 4px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 4px;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      .ic {
+        margin-right: 8px;
+      }
+    }
+
+    .contact-detail {
+      @extend .detail;
+
+      margin-top: 0px !important;
+      margin-left: 8px;
+    }
+  }
+
+  &-links {
+    margin-right: 96px;
+  }
+
+  &-contact {
+    margin-left: auto;
+  }
+
+  &-title {
+    color: white;
+  }
+
+  &-subscribe-btn {
+    color: $white !important;
+    border-color: $white !important;
+    padding: 13px !important;
+  }
+
+  &-subscribe-btn-primary {
+    color: $primary-clr !important;
+    border-color: $primary-clr !important;
+    padding: 13px !important;
+  }
+
+  &-subscribe-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-contact-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+}
+
+.subscribe-info {
+  @extend .txt-tiny;
+  color: $white;   
+}

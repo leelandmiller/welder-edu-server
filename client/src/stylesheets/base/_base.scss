@@ -1,0 +1,111 @@
+body {
+  font-family: $FontFamily;
+  padding: 0;
+  margin: 0;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transition: all 0.2s ease;
+    text-decoration: underline;
+  }
+}
+
+.outer-app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-wrapper {
+  flex: 1 0 auto;
+  margin-bottom: 72px;
+  @media (min-width: $med-break) {
+    margin-bottom: 0px;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+  height: fit-content;
+  margin: 0px;
+
+  @media (min-width: $med-break) {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+  height: fit-content;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: $dark-txt-clr;
+  height: fit-content;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark-txt-clr;
+  height: fit-content;
+  margin: 0px;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 500;
+  color: $dark-txt-clr;
+  height: fit-content;
+  margin: 0px;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: $grey-txt-clr;
+  height: fit-content;
+  margin: 0px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  color: $grey;
+  height: fit-content;
+  margin: 0px;
+}
+
+input {
+  @extend .body1;
+}
+
+textarea {
+  // font-size: 16px;
+  // font-weight: 300;
+  @extend .body1;
+  // color: $grey;
+  // height: fit-content;
+}
