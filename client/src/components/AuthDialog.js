@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import Dialog from '@material-ui/core/Dialog';
 // import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -81,31 +82,20 @@ const AuthDialog = withStyles(dialogStyles)(props => {
   const { classes, handleClose, open, authType } = props;
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('xs'));
+  const fbClick = `${API_URL}/auth/facebook`
 
-  const SignUpDialogContent = () => (
+  const MyDialogContent = type => (
     <React.Fragment>
       <DialogTitle id="alert-dialog-slide-title" onClose={handleClose}>
-        Sign Up & Start Learning!
+        {
+          type === 'signup' ?
+            'Sign Up & Start Learning!' :
+            'Log In to Your Account!'
+        }
       </DialogTitle>
       <DialogContent classes={{ root: classes.contentRoot }}>
         <DialogContentText id="alert-dialog-slide-description">
-          <Button classes={{ root: classes.fbButtonRoot }}>
-            <img className={classes.fbButtonIc} src="/img/f_logo_RGB-White_250.png" />
-            <span className={classes.fbButtonText}>Continue with Facebook</span>
-          </Button>
-        </DialogContentText>
-      </DialogContent>
-    </React.Fragment>
-  )
-
-  const LoginDialogContent = () => (
-    <React.Fragment>
-      <DialogTitle id="alert-dialog-slide-title" onClose={handleClose}>
-        Log In to your Account!
-      </DialogTitle>
-      <DialogContent classes={{ root: classes.contentRoot }}>
-        <DialogContentText id="alert-dialog-slide-description">
-          <Button classes={{ root: classes.fbButtonRoot }}>
+          <Button href={fbClick} classes={{ root: classes.fbButtonRoot }}>
             <img className={classes.fbButtonIc} src="/img/f_logo_RGB-White_250.png" />
             <span className={classes.fbButtonText}>Continue with Facebook</span>
           </Button>
@@ -127,11 +117,12 @@ const AuthDialog = withStyles(dialogStyles)(props => {
         aria-labelledby="alert-dialog-slide-title"
         aria-describedby="alert-dialog-slide-description"
       >
-        {
+        <MyDialogContent type={authType}/>
+        {/* {
           authType === 'signup' ?
             <SignUpDialogContent/> :
             <LoginDialogContent/>
-        }
+        } */}
       </Dialog>
     </div>
   )

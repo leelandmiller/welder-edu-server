@@ -22,21 +22,21 @@ Undo the previous migration file.
 ---
 
 #### **Undo All:** 
-`npx sequelize-cli db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js`
+`sequelize db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js`
 
 You can revert back to initial state by undoing all migrations with db:migrate:undo:all command. You can also revert back to a specific migration by passing its name in --to option.
 
 ---
 
 #### **Create Model & Migration:** 
-`npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string`
+`sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string`
 
 Creates a model file and migration with the supplied name and supplied attributes.
 
 ---
 
 #### **Create Migration:** 
-`npx sequelize-cli migration:generate --name migration-**skeleton**`
+`sequelize migration:generate --name migration-**skeleton**`
 
 Creates a migration file with the supplied file name.
 

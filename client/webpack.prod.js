@@ -10,8 +10,8 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const API_URL = 'http://jmssalesapp-env.g8pvrm2vaf.us-east-1.elasticbeanstalk.com';
-const API_URL = 'https://api.jmssalesinc.com';
-const OPEN_HOUSE_API_URL = 'https://04vz3a2u7h.execute-api.us-east-1.amazonaws.com/production/email/open-house';
+const API_URL = 'https://www.weldereducationandtraining.com';
+// const OPEN_HOUSE_API_URL = 'https://04vz3a2u7h.execute-api.us-east-1.amazonaws.com/production/email/open-house';
 
 module.exports = merge(common, {
   entry: './src/index.js',
@@ -52,14 +52,13 @@ module.exports = merge(common, {
       ]
     }),
     new HtmlWebpackPlugin({
-      title: 'JMS Sales, Inc. - Manufactured Homes Specialists',
+      title: 'Online Welding Courses - Anywhere, Anytime | Welder Education & Training',
       filename: 'index.html',
       template: 'template.html'
     }),
     new webpack.DefinePlugin({
       ENV: JSON.stringify('production'),
       'API_URL': JSON.stringify(API_URL),
-      OPEN_HOUSE_API_URL: JSON.stringify(OPEN_HOUSE_API_URL)
     })
   ]
 });

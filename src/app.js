@@ -11,7 +11,8 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { apolloUploadExpress } from 'apollo-upload-server';
 
 const appConfig = require('./config')();
-const secret = process.env.SECRET;
+const SECRET = appConfig.SECRET;
+import { addUser, createTokens } from './auth'
 const ENV = process.env.NODE_ENV || 'development';
 const app = express()
 const PORT = appConfig.PORT || process.env.PORT
@@ -63,9 +64,10 @@ app.get('/auth/facebook',
 
 app.get('/auth/facebook/callback',
   passport.authenticate('facebook', { session: false }),
-  function(req, res) {
+  async (req, res) => {
+    const [token, refreshToken] = await createTokens(user, SECRET);
     // Successful authentication, redirect home.
-    res.send('auth was good');
+    res.redirect(`${appConfig.APP_URL}`)
   });
 
 const corsOptions = {
@@ -73,6 +75,8 @@ const corsOptions = {
   optionsSuccessStatus: 200,
   credentials: true
 }
+
+app.use(addUser)
 
 app.use(
   '/graphql',
@@ -84,7 +88,7 @@ app.use(
     context: {
       req,
       models,
-      secret
+      secret: SECRET
     }
   }))
 );
